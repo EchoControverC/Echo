@@ -30,7 +30,9 @@ int main() {
 
 
 
-
+cout<<("Hello, Kevin!\n");
+cout<<("That's right...\n");
+cout<<("It's daddy-o... :)\n");
 
 	
 
