@@ -18,21 +18,35 @@ Proto_1 - in progress
 #include<fstream>			//Allows us to read/write to files.
 #include<string>			//We may possibly need strings...  Haven't decided yet.
 #include<cmath>				//In case we want to make complex ciphers based on math.
-	
+
+// Global ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+int x = 0;
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Functions ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 void  _instructions();		//This will include instructions for user. You guys can type this out in the actual function body at the bottom.
+
 void _read();
 void _write();
 
-void _Encrypt();		//Just writing a prototype since we're going to need this eventually.
+void _opSelect( );
+
+void _encrypt();		
+void _decrypt();
+
+void _encode();
+void _decode();
+
+void _flushbuffer();
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 using namespace std;
 int main() {
 
-
-
-
-
+	_instructions();
 	
+
 
 
 
@@ -40,14 +54,61 @@ int main() {
 	system("pause");
 	return(0);
 }
+void  _opSelect() {
+
+
+	switch (x) {
+
+	case 1:
+
+			_encrypt();
+
+			break;
+
+	case 2:
+
+			_decrypt();
+
+			break;
+
+	case 3:
+
+			_encode();
+
+			break;
+
+	case 4:
+
+			_decode();
+
+			break;
+
+	default:
+
+		cout << "Invalid entry. Returning to Main.\n" << endl;
+		x = 0;
+
+	}
+
+	
+}
 
 void _instructions(){
 	//Insert your instructional code here.  How is the user suposed to use this program?
 		//Should this concept be menu driven? Give simple, clear, and concise instructions.
 
+	cout << "Welcome to the enigma.\n"
+		<< "Please select your operation with an integer:\n\n"
+			<< "[ 1 ] - encrypt typed message, [ 2 ] - decrypt typed message,\n"
+			<< "[ 3 ] - load encoded message from .txt file, [ 4 ] - submit encoded message to .txt file.\n" << endl;		//I've decided to go ahead and make this a menu driven system.
+							
+		cin >> x;
 
+		_opSelect();
 
 }
+
+
 
 void _read(){
 
@@ -87,5 +148,61 @@ void  _write() {
 	return;
 }
 
-void _Encrypt(){
+
+
+void _encrypt(){
+
+	string message;
+	int i = 0;
+
+	_flushbuffer();
+
+	cout << "Please type the message you would like to be encrypted on the next line and press [enter] when you're done.\n"
+		<< ">  ";
+	
+	cin >> message;
+
+	cout << "Message recorded:\n" << endl;
+	cout << message;
+
+	
+
+}
+void _decrypt() {
+
+	string message;
+
+	_flushbuffer();
+
+	cout << "Please type the message you would like to be decrypted on the next line and press [enter] when you're done.\n" 
+			<< ">  ";
+
+	getline(cin, message);
+
+		cout << "\nmessage accepted - encrypting\n" << endl;
+
+		cout << "Your message was : " << message << endl;
+
+}
+
+void _encode(){
+
+	cout << "Someday I'll be encoding stuff!\n" << endl;
+
+
+}
+
+void _decode(){
+
+	cout << "Someday I'll be decoding stuff!\n" << endl;
+
+}
+
+void _flushbuffer() {
+
+	cin.clear();
+	cin.ignore(INT_MAX, '\n');
+
+	cout << "Presto - Buffer Cleared\n" << endl;
+
 }
