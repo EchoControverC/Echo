@@ -188,7 +188,50 @@ void _decrypt() {
 void _encode(){
 
 	cout << "Someday I'll be encoding stuff!\n" << endl;
+/*
+this is my encoding program from March 2003 ;)
 
+It was meant to do a simple cryptographical substitution cipher when you clicked on the Dialog box button...
+
+The idea was for Anthony and I to use these 2 executables to exchange encrypted emails.  Kevin was too young back then :).
+
+so i think that you can simply remove 'm_Equation.' and call the function 'Replace' and you're golden.. daddy-o
+
+void CEquations2Dlg::OnRemovespcBtn() 
+{
+
+	UpdateData();
+	m_Equation.Replace("a",")");
+	m_Equation.Replace("e","+");
+	m_Equation.Replace("i","=");
+	m_Equation.Replace("o","-");
+	m_Equation.Replace("u","&");
+	m_Equation.Replace("l","*");
+	m_Equation.Replace("h","(");
+	m_Equation.Replace("r","~");
+	m_Equation.Replace("d","!");
+	m_Equation.Replace("c","@");
+	m_Equation.Replace("f","#");
+	m_Equation.Replace("g","$");
+	m_Equation.Replace("t","%");
+	m_Equation.Replace("s","^");
+	m_Equation.Replace("j","1");
+	m_Equation.Replace("k","2");
+	m_Equation.Replace("m","3");
+	m_Equation.Replace("n","4");
+	m_Equation.Replace("p","5");
+	m_Equation.Replace("q","6");
+	m_Equation.Replace("u","7");
+	m_Equation.Replace("v","8");
+	m_Equation.Replace("x","9");
+	m_Equation.Replace("y","0");
+	m_Equation.Replace("z","?");
+
+	UpdateData(FALSE);
+	
+}
+
+*/
 
 }
 
@@ -196,6 +239,48 @@ void _decode(){
 
 	cout << "Someday I'll be decoding stuff!\n" << endl;
 
+/*
+this is the corresponding decoding program from March 2003 ;)
+
+Again, it implemented a simple cryptographical substitution cipher when you clicked on the Dialog box button...
+
+The idea was for Anthony and I to use these 2 executables to exchange encrypted emails.  Kevin was too young back then :).
+
+so i think that you can simply remove 'm_Equation.' and call the function 'Replace' and you're golden.. daddy-o
+
+void CDecrypterDlg::OnDecryptBtn() 
+{
+
+	UpdateData();
+	m_Decryption.Replace(")","a");
+	m_Decryption.Replace("+","e");
+	m_Decryption.Replace("=","i");
+	m_Decryption.Replace("-","o");
+	m_Decryption.Replace("&","u");
+	m_Decryption.Replace("*","l");
+	m_Decryption.Replace("(","h");
+	m_Decryption.Replace("~","r");
+	m_Decryption.Replace("!","d");
+	m_Decryption.Replace("@","c");
+	m_Decryption.Replace("#","f");
+	m_Decryption.Replace("$","g");
+	m_Decryption.Replace("%","t");
+	m_Decryption.Replace("^","s");
+	m_Decryption.Replace("1","j");
+	m_Decryption.Replace("2","k");
+	m_Decryption.Replace("3","m");
+	m_Decryption.Replace("4","n");
+	m_Decryption.Replace("5","p");
+	m_Decryption.Replace("6","q");
+	m_Decryption.Replace("7","u");
+	m_Decryption.Replace("8","v");
+	m_Decryption.Replace("9","x");
+	m_Decryption.Replace("0","y");
+	UpdateData(FALSE);
+}
+
+*/
+	
 }
 
 void _flushbuffer() {
