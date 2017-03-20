@@ -1,34 +1,34 @@
-/*
+	/*
 
 
 
-This is the  A.S.K. organization's first cooperative coding project 2/13/17
+	This is the  A.S.K. organization's first cooperative coding project 2/13/17
 
-The purpose of this project will be to encrypt and decrypt messages sent between
+	The purpose of this project will be to encrypt and decrypt messages sent between
 
-two parties. Input will be recorded, checked, and encoded; ciphers will be created/deployed;
+	two parties. Input will be recorded, checked, and encoded; ciphers will be created/deployed;
 
-information read from and written to .txt files.
-
-
-
-Proto_1 - in progress
+	information read from and written to .txt files.
 
 
 
--echo
-
--
-
--
+	Proto_1 - in progress
 
 
 
+	-echo
+
+	-
+
+	-
 
 
-*/
 
-//Start with header files
+
+
+	*/
+
+	//Start with header files
 
 #include<iostream>			//Allows us to get user input.
 
@@ -42,9 +42,9 @@ Proto_1 - in progress
 
 
 
-// Global ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Global ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int x = 0;
+	int x = 0;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -328,7 +328,7 @@ void _encrypt() {
 
 
 
-		_flushbuffer();
+	_flushbuffer();
 
 
 
@@ -340,7 +340,7 @@ void _encrypt() {
 
 	cin >> message;
 
-		_flushbuffer();
+	_flushbuffer();
 
 
 
@@ -350,329 +350,336 @@ void _encrypt() {
 
 	cout << "Is this correct?\n1 - yes\n2 - no\n>" << endl;
 
-		cin >> userin;
+	cin >> userin;
 
 
 
-		if (userin == 1) {
+	if (userin == 1) {
 
-	
 
-			cout << "-- Encrypting --" << endl;
 
-		
+		cout << "-- Encrypting --" << endl;
 
-			cout << fixed << showpoint;
 
-			for (int i = 0; i < message.length(); i++) {
 
-			
+		cout << fixed << showpoint;
 
-				messageArray[i] = message[i];
+		for (int i = 0; i < message.length(); i++) {
 
-				//_replace();
 
 
+			messageArray[i] = message[i];
 
-				if (messageArray[i] == 'a' || messageArray[i] == 'A') {
+			//_replace();
 
 
 
-					messageOut[i] = 01;
+			if (messageArray[i] == 'a' || messageArray[i] == 'A') {
 
-				} else if (messageArray[i] == 'b' || messageArray[i] == 'B') {
 
 
+				messageOut[i] = 01;
 
-					messageOut[i] = 02;
+			}
+			else if (messageArray[i] == 'b' || messageArray[i] == 'B') {
 
-				} else if (messageArray[i] == 'c' || messageArray[i] == 'C') {
 
 
+				messageOut[i] = 02;
 
-					messageOut[i] = 03;
+			}
+			else if (messageArray[i] == 'c' || messageArray[i] == 'C') {
 
-				} else if (messageArray[i] == 'd' || messageArray[i] == 'D') {
 
 
+				messageOut[i] = 03;
 
-					messageOut[i] = 04;
+			}
+			else if (messageArray[i] == 'd' || messageArray[i] == 'D') {
 
-				} else if (messageArray[i] == 'e' || messageArray[i] == 'E') {
 
 
+				messageOut[i] = 04;
 
-					messageOut[i] = 05;
+			}
+			else if (messageArray[i] == 'e' || messageArray[i] == 'E') {
 
-				} else if (messageArray[i] == 'f' || messageArray[i] == 'F') {
 
 
+				messageOut[i] = 05;
 
-					messageOut[i] = 06;
+			}
+			else if (messageArray[i] == 'f' || messageArray[i] == 'F') {
 
-				} else if (messageArray[i] == 'g' || messageArray[i] == 'G') {
 
 
+				messageOut[i] = 06;
 
-					messageOut[i] = 07;
+			}
+			else if (messageArray[i] == 'g' || messageArray[i] == 'G') {
 
-				} else if (messageArray[i] == 'h' || messageArray[i] == 'H') {
 
 
+				messageOut[i] = 07;
 
-					messageOut[i] = 27;
+			}
+			else if (messageArray[i] == 'h' || messageArray[i] == 'H') {
 
-				} else if (messageArray[i] == 'i' || messageArray[i] == 'I') {
 
 
+				messageOut[i] = 27;
 
-					messageOut[i] = 28;
+			}
+			else if (messageArray[i] == 'i' || messageArray[i] == 'I') {
 
-				} else if (messageArray[i] == 'j' || messageArray[i] == 'J') {
 
 
+				messageOut[i] = 28;
 
-					messageOut[i] = 10;
+			}
+			else if (messageArray[i] == 'j' || messageArray[i] == 'J') {
 
-				} else if (messageArray[i] == 'k' || messageArray[i] == 'K') {
 
 
+				messageOut[i] = 10;
 
-					messageOut[i] = 11;
+			}
+			else if (messageArray[i] == 'k' || messageArray[i] == 'K') {
 
-				} else if (messageArray[i] == 'l' || messageArray[i] == 'L') {
 
 
+				messageOut[i] = 11;
 
-					messageOut[i] = 12;
+			}
+			else if (messageArray[i] == 'l' || messageArray[i] == 'L') {
 
-				} else if (messageArray[i] == 'm' || messageArray[i] == 'M') {
 
 
+				messageOut[i] = 12;
 
-					messageOut[i] = 13;
+			}
+			else if (messageArray[i] == 'm' || messageArray[i] == 'M') {
 
-				} else if (messageArray[i] == 'n' || messageArray[i] == 'N') {
 
 
+				messageOut[i] = 13;
 
-					messageOut[i] = 14;
+			}
+			else if (messageArray[i] == 'n' || messageArray[i] == 'N') {
 
-				}
 
-				else if (messageArray[i] == 'o' || messageArray[i] == 'O') {
 
+				messageOut[i] = 14;
 
+			}
 
-					messageOut[i] = 15;
+			else if (messageArray[i] == 'o' || messageArray[i] == 'O') {
 
-				}
 
-				else if (messageArray[i] == 'p' || messageArray[i] == 'P') {
 
+				messageOut[i] = 15;
 
+			}
 
-					messageOut[i] = 16;
+			else if (messageArray[i] == 'p' || messageArray[i] == 'P') {
 
-				}
 
-				else if (messageArray[i] == 'q' || messageArray[i] == 'Q') {
 
+				messageOut[i] = 16;
 
+			}
 
-					messageOut[i] = 17;
+			else if (messageArray[i] == 'q' || messageArray[i] == 'Q') {
 
-				}
 
-				else if (messageArray[i] == 'r' || messageArray[i] == 'R') {
 
+				messageOut[i] = 17;
 
+			}
 
-					messageOut[i] = 18;
+			else if (messageArray[i] == 'r' || messageArray[i] == 'R') {
 
-				}
 
-				else if (messageArray[i] == 's' || messageArray[i] == 'S') {
 
+				messageOut[i] = 18;
 
+			}
 
-					messageOut[i] = 19;
+			else if (messageArray[i] == 's' || messageArray[i] == 'S') {
 
-				}
 
-				else if (messageArray[i] == 't' || messageArray[i] == 'T') {
 
+				messageOut[i] = 19;
 
+			}
 
-					messageOut[i] = 20;
+			else if (messageArray[i] == 't' || messageArray[i] == 'T') {
 
-				}
 
-				else if (messageArray[i] == 'u' || messageArray[i] == 'U') {
 
+				messageOut[i] = 20;
 
+			}
 
-					messageOut[i] = 21;
+			else if (messageArray[i] == 'u' || messageArray[i] == 'U') {
 
-				}
 
-				else if (messageArray[i] == 'v' || messageArray[i] == 'V') {
 
+				messageOut[i] = 21;
 
+			}
 
-					messageOut[i] = 22;
+			else if (messageArray[i] == 'v' || messageArray[i] == 'V') {
 
-				}
 
-				else if (messageArray[i] == 'w' || messageArray[i] == 'W') {
 
+				messageOut[i] = 22;
 
+			}
 
-					messageOut[i] = 23;
+			else if (messageArray[i] == 'w' || messageArray[i] == 'W') {
 
-				}
 
-				else if (messageArray[i] == 'x' || messageArray[i] == 'X') {
 
+				messageOut[i] = 23;
 
+			}
 
-					messageOut[i] = 24;
+			else if (messageArray[i] == 'x' || messageArray[i] == 'X') {
 
-				}
 
-				else if (messageArray[i] == 'y' || messageArray[i] == 'Y') {
 
+				messageOut[i] = 24;
 
+			}
 
-					messageOut[i] = 25;
+			else if (messageArray[i] == 'y' || messageArray[i] == 'Y') {
 
-				}
 
-				else if (messageArray[i] == 'z' || messageArray[i] == 'Z') {
 
+				messageOut[i] = 25;
 
+			}
 
-					messageOut[i] = 26;
+			else if (messageArray[i] == 'z' || messageArray[i] == 'Z') {
 
-				} else if (messageArray[i] == ' ') {
 
 
+				messageOut[i] = 26;
 
-					messageOut[i] = 00;
+			}
+			else if (messageArray[i] == ' ') {
 
-																															
 
-				}
 
-				else {
+				messageOut[i] = 00;
 
-				
 
-					cout << "character unrecognized" << endl;
 
-				}
+			}
 
+			else {
 
 
-			
+
+				cout << "character unrecognized" << endl;
 
 			}
 
 
-
-			//RSA encryption routine
-
-			int p = 42379;												//p and q  are two prime numbers of 5 digits.  In real practice they're 100 digit or 300 digit long 
-
-			int q = 19477;
-
-
-
-			int alpha = p * q;
-
-			int phi = (p - 1) * (q - 1);
-
-			int r = 6875;
-
-			int s = 319096835;
-
-
-
-			cout << "alpha is.. " << alpha;
-
-			cout << endl;
-
-			cout << "phi is.." << phi;
-
-			cout << endl;
-
-			cout << "r is.." << r;										//r and s are picked since multiplied together and divided by phi give a remainder of '1'
-
-			cout << endl;
-
-			cout << "s is.." << s;
-
-			cout << endl;
-
-			
-
-
-
-
-
-			std::stringstream ss;
-
-			int result;
-
-
-
-			for (int i = 0; i < message.length(); i++) {
-
-			
-
-				//cout << messageArray[i];
-
-				cout << messageOut[i];
-
-				cout << endl;
-
-				ss << messageOut[i];
-
-				//int result;
-
-				ss >> result;
-
-				_flushbuffer();
-
-				cout << "encrypted message is.." << result;				//more work to do here.  we need the array into a variable so that we can exponentiate it - not working
-
-			}
-
-
-
-			cout << endl;
-
-
-
-		} else if (userin == 0) {
-
-	
-
-			cout << "Apologies, dear sir, returning to message capture.\n\n" << endl;
-
-
-
-		} else {
-
-	
-
-			cout << "Invalid entry" << endl;
 
 
 
 		}
 
-	
+
+
+		//RSA encryption routine
+
+		int p = 42379;					//p and q  are two prime numbers of 5 digits.  In real practice they're 100 digit or 300 digit long 
+
+		int q = 19477;
+
+
+
+		int alpha = p * q;
+
+		int phi = (p - 1) * (q - 1);
+
+		int r = 6875;
+
+		int s = 319096835;
+
+
+
+		cout << "alpha is.. " << alpha;
+
+		cout << endl;
+
+		cout << "phi is.." << phi;
+
+		cout << endl;
+
+		cout << "r is.." << r;				//r and s are picked since multiplied together and divided by phi give a remainder of '1'
+
+		cout << endl;
+
+		cout << "s is.." << s;
+
+		cout << endl;
+
+
+
+
+
+
+
+		std::stringstream ss;
+
+		int result;
+		int resultTo_the_R;
+
+
+
+		for (int i = 0; i < message.length(); i++) {
+
+			//cout << messageOut[i];
+			ss << messageOut[i];
+
+		}
+
+		ss >> result;
+		cout << "encrypted message is.." << result;
+		cout << endl;
+
+		resultTo_the_R = (result) ^ r;						//more work to do here.  we need the variable 'result' to be raised to the r power - not working
+		cout << "resultto the r is.." << resultTo_the_R; 
+
+		cout << endl;
+
+
+
+	}
+	else if (userin == 0) {
+
+
+
+		cout << "Apologies, dear sir, returning to message capture.\n\n" << endl;
+
+
+
+	}
+	else {
+
+
+
+		cout << "Invalid entry" << endl;
+
+
+
+	}
+
+
 
 }
 
@@ -740,7 +747,7 @@ void _decode() {
 
 
 
-	
+
 
 
 
